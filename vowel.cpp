@@ -13,7 +13,7 @@ int inplace_remove(char *s){
             s[insert] = s[i];
             insert++; 
         }else{
-            count++;
+            count++; // count the number of vowels
         } 
     }
     for(i=0; i<count; i++)
@@ -22,14 +22,15 @@ int inplace_remove(char *s){
 }
 
 char *remove(char *s){
-    char  *new_s = (char *)malloc(strlen(s));
+    char *new_s = (char *)malloc(strlen(s));
     int count=0;
     for(int i=0; i<strlen(s); i++){
-        if(s[i]!='a'){
-           new_s[count]=s[i];
-           count++;
+        if(s[i]!='a'){ // && e i o u A E I O U
+            new_s[count]=s[i];
+            count++; // cout the number of non-vowels
         } 
     }
+    new_s[count]=0;
     return new_s;
 }
 
