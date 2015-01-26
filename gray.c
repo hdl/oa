@@ -10,6 +10,7 @@ int grayCheck(char term1, char term2)
         x=x&(x-1);
         total++; 
     }
+    // if(x!=0 && (x&(x-1)==0)) return 1;
     return total==1?1:0; // if only one 1, they are succssive gray code by defination
 }
 
